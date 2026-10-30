@@ -223,7 +223,6 @@ section .card h2 {
 /* Estilos de la tabla de reportes */
 
 .Card_Reportes {
-  border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
   margin: 20px 20px 40px 20px;
@@ -272,9 +271,7 @@ section .card h2 {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.Modal_Contenido_Reporte button {
-  
-}
+.Modal_Contenido_Reporte button {}
 
 .btn_reporte {
   padding: 3px 8px;

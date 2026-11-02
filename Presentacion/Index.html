@@ -17,9 +17,9 @@
   <main class="container">
     <aside>
       <button type="button" id="maquinasBtn">Taller</button>
-      <button type="button" id="reportesBtn">Reportes</button>
+      <!--<button type="button" id="reportesBtn">Reportes</button>-->
       <button type="button" id="inventarioBtn">Inventario</button>
-      <button type="button" id="clientesBtn">Clientes</button>
+      <!--<button type="button" id="clientesBtn">Clientes</button>-->
       <button type="button" id="volverBtn">Volver al menu</button>
     </aside>
 
@@ -38,23 +38,49 @@
           <p id="Estado-MaquinasF">--</p>
         </div>
         <div class="card">
-          <h2>Clientes</h2>
-          <p id="ID-Clientes">--</p>
-        </div>
-        <div class="card">
           <h2>Cantidad de Repuestos</h2>
           <p id="ID-Repuestos">--</p>
         </div>
-        <div class="card">
-          <h2>Reportes Disponibles</h2>
-          <p id="ID-Reportes">--</p>
+      </div>
+      <div>
+        <div class="Card_Reportes">
+          <table id="table_Reportes" class="table_Reportes">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Tecnico</th>
+                <th>Asunto</th>
+                <th><button type="button" id="abrir_modal_reporte" class="btn_reporte">abrir</button></th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="Negocio/app.js"></script>
-  <script src="Negocio/botones_menu.js"></script>
+
+  <!--Modal para los reportes-->
+
+  <div id="Modal_Reporte" class="Modal">
+    <div class="Modal_Contenido_Reporte">
+      <h2>Detalle del Reporte</h2>
+
+      <p><strong>Cliente:</strong> <span id="modal-cliente"></span></p>
+      <p><strong>Técnico:</strong> <span id="modal-tecnico"></span></p>
+      <p><strong>Asunto:</strong> <span id="modal-asunto"></span></p>
+      <p><strong>Descripción completa:</strong></p>
+      <p id="modal-descripcion"></p>
+
+      <button type="button" id="cerrar_modal_reporte">cerrar</button>
+    </div>
+  </div>
+
+  <script src="../Negocio/app.js"></script>
+  <script src="../Negocio/botones_menu.js"></script>
+  <script src="../Negocio/Modals.js"></script>
 </body>
 
 </html>
